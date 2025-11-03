@@ -2,10 +2,10 @@
     <section :aria-labelledby="headingId" class="w-full">
       <!-- Optional heading -->
       <header v-if="title" class="mb-8">
-        <h2 :id="headingId" class="text-3xl font-bold">{{ title }}</h2>
+        <h2 :id="headingId" class="text-white text-3xl font-bold">{{ title }}</h2>
       </header>
   
-      <div v-if="sortedArticles.length === 0" class="text-gray-500 italic">
+      <div v-if="sortedArticles.length === 0" class="text-white italic">
         Keine Neuigkeiten vorhanden.
       </div>
   
@@ -14,23 +14,23 @@
           v-for="(a, idx) in sortedArticles"
           :key="a.id || idx"
           class="pt-8"
-          :class="{ 'border-t border-gray-300': idx !== 0 }"
+          :class="{ 'text-white border-t border-gray-300': idx !== 0 }"
         >
           <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8">
             <!-- Date -->
             <time
-              class="md:col-span-3 text-xl font-medium tracking-wide font-architect"
+              class="md:col-span-3 text-xl font-medium tracking-wide font-architect text-white"
               :datetime="isoDate(a.date)"
               >{{ formatMonthYear(a.date) }}</time
             >
   
             <!-- Content -->
             <div class="md:col-span-9 space-y-3">
-              <p class="font-semibold leading-snug">
+              <p class="font-semibold leading-snug text-white">
                 {{ a.title }}
               </p>
   
-              <p v-if="a.body" class="leading-relaxed text-gray-800">
+              <p v-if="a.body" class="leading-relaxed text-white">
                 {{ a.body }}
               </p>
   

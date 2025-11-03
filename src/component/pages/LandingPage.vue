@@ -7,9 +7,9 @@
     :sticky="true"
     :parallax="true"
   />
-  <main class="parallax-main min-h-screen relative z-10 pt-10 sm:pt-16">
+  <main class="parallax-main relative z-10 pt-10 sm:pt-16">
     <section>
-      <p class="text-m mb-6">
+      <p class="text-m mb-6 text-white">
         Fungi Forager ist ein interaktives Lernspiel, das dich in eine 3D-Waldwelt entführt. Hier
         lernst du spielerisch über echte Pilzarten zu bestimmen.
       </p>
@@ -20,7 +20,7 @@
     </section>
     <section>
       <h2 class="text-3xl font-bold mb-6">Unsere Mission</h2>
-      <p class="text-m mb-6">
+      <p class="text-m mb-6 text-white">
         Immer weniger Menschen kennen sich mit der Natur aus. Mit Fungi Forager möchten wir dieses
         Wissen zurückbringen.
       </p>

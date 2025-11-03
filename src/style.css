@@ -39,5 +39,5 @@ p {
 /* Parallax main gradient that scrolls over the hero image */
 .parallax-main {
   /* Top should be fully transparent light gray, bottom deep forest green */
-  background: linear-gradient(to top, #031600 10%, rgba(217, 217, 217, 0) 100%);
+  background: linear-gradient(to top, #031600 95%, rgba(217, 217, 217, 0) 100%);
 }

@@ -41,3 +41,44 @@ p {
   /* Top should be fully transparent light gray, bottom deep forest green */
   background: linear-gradient(to top, #031600 95%, rgba(217, 217, 217, 0) 100%);
 }
+
+@layer components {
+  /* GRID VERSION — simplest, robust inside any parent */
+  .feature-list {
+    @apply grid grid-cols-1 gap-8 w-full;
+  }
+  @media (width >= theme(--breakpoint-md)) {
+    .feature-list {
+      @apply grid-cols-2 gap-10;
+    }
+  }
+
+  .feature-item {
+    @apply flex items-start gap-4;
+  }
+  .feature-icon {
+    @apply w-12 h-12 select-none;
+  }
+  .feature-title {
+    @apply font-semibold text-emerald-100;
+  }
+  .feature-text {
+    @apply text-emerald-200/90 leading-relaxed;
+  }
+
+  /* OPTIONAL: FLEX VERSION (if you prefer flex instead of grid) */
+  .feature-list--flex {
+    @apply flex flex-col gap-8 items-stretch w-full;
+  }
+  @media (width >= theme(--breakpoint-md)) {
+    .feature-list--flex {
+      @apply flex-row flex-wrap gap-10;
+    }
+    .feature-item--half {
+      @apply basis-1/2; /* Or md:w-1/2 if on older Tailwind */
+    }
+  }
+  .feature-item--full {
+    @apply w-full; /* default on mobile */
+  }
+}

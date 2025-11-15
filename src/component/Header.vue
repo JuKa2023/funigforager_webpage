@@ -42,7 +42,7 @@
 
         <!-- Mobile Menu Button -->
         <button
-          class="md:hidden text-white focus:outline-none"
+          class="md:hidden text-[#AA0000] focus:outline-none"
           @click="mobileOpen = !mobileOpen"
         >
           <span v-if="!mobileOpen">☰</span>
@@ -52,39 +52,40 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div v-if="mobileOpen" class="md:hidden bg-gray-800 px-4 pb-4 space-y-2">
+    <div v-if="mobileOpen" class="md:hidden backdrop-blur-sm px-4 pb-4 space-y-2 text-right
+">
       <router-link
         to="/"
-        class="block py-2 hover:text-yellow-300"
-        :class="{ 'text-yellow-300 font-semibold': $route.name === 'landing' }"
+        class="block py-2 hover:underline"
+        :class="{'hidden': $route.name === 'landing' }"
         @click="mobileOpen=false"
       >Home</router-link>
 
       <router-link
         to="/hinweis"
-        class="block py-2 hover:text-yellow-300"
-        :class="{ 'text-yellow-300 font-semibold': $route.name === 'hinweis' }"
+        class="block py-2 hover:underline"
+        :class="{'hidden': $route.name === 'hinweis' }"
         @click="mobileOpen=false"
       >Hinweis</router-link>
 
       <router-link
         to="/lexikon"
-        class="block py-2 hover:text-yellow-300"
-        :class="{ 'text-yellow-300 font-semibold': $route.name === 'lexikon' }"
+        class="block py-2 hover:underline"
+        :class="{'hidden': $route.name === 'lexikon' }"
         @click="mobileOpen=false"
       >Lexikon</router-link>
 
       <router-link
         to="/spielinformation"
-        class="block py-2 hover:text-yellow-300"
-        :class="{ 'text-yellow-300 font-semibold': $route.name === 'spielinformation' }"
+        class="block py-2 hover:underline"
+        :class="{'hidden': $route.name === 'spielinformation' }"
         @click="mobileOpen=false"
       >Spielinformation</router-link>
 
       <router-link
         to="/ueberuns"
-        class="block py-2 hover:text-yellow-300"
-        :class="{ 'text-yellow-300 font-semibold': $route.name === 'ueberuns' }"
+        class="block py-2 hover:underline"
+        :class="{'hidden': $route.name === 'ueberuns' }"
         @click="mobileOpen=false"
       >Über Uns</router-link>
     </div>

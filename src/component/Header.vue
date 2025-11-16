@@ -8,7 +8,7 @@
         </img>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-6">
+        <nav class="hidden md:flex space-x-10 text-lg">
           <router-link
             to="/"
             class="hover:underline"
@@ -42,11 +42,14 @@
 
         <!-- Mobile Menu Button -->
         <button
-          class="md:hidden text-[#AA0000] focus:outline-none"
+          class="md:hidden focus:outline-none"
           @click="mobileOpen = !mobileOpen"
         >
-          <span v-if="!mobileOpen">☰</span>
-          <span v-else>✖</span>
+          <img
+            :src="mobileOpen ? CloseIcon : BurgerIcon"
+            :alt="mobileOpen ? 'Close menu' : 'Open menu'"
+            class="w-8 h-8"
+          />
         </button>
       </div>
     </div>
@@ -96,4 +99,7 @@
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 const mobileOpen = ref(false)
+
+import BurgerIcon from '../assets/icons_burger.svg'
+import CloseIcon from '../assets/icons_close.svg'
 </script>

@@ -1,5 +1,8 @@
 <template>
-  <header class="text-[#AA0000] fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-sm">
+  <header
+    ref="headerRef"
+    class="text-[#AA0000] fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-sm"
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
 
@@ -48,7 +51,7 @@
           <img
             :src="mobileOpen ? CloseIcon : BurgerIcon"
             :alt="mobileOpen ? 'Close menu' : 'Open menu'"
-            class="w-8 h-8"
+            class="w-6 h-6"
           />
         </button>
       </div>
@@ -96,10 +99,26 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 const mobileOpen = ref(false)
+const headerRef = ref(null)
 
 import BurgerIcon from '../assets/icons_burger.svg'
 import CloseIcon from '../assets/icons_close.svg'
+
+const handleClickOutside = (event) => {
+  if (!mobileOpen.value || !headerRef.value) return
+  if (!headerRef.value.contains(event.target)) {
+    mobileOpen.value = false
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('pointerdown', handleClickOutside)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('pointerdown', handleClickOutside)
+})
 </script>

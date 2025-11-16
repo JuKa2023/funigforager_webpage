@@ -60,12 +60,6 @@
   <script setup lang="ts">
   import { computed } from 'vue'
 
-  /**
-   * Props
-   * - articles: [{ id?, date: string|Date, title: string, body?: string, points?: string[], link?: { href, label? } }]
-   * - title: optional heading for the section
-   * - newestFirst: boolean (default true)
-   */
   const props = defineProps({
     articles: { type: Array, default: () => [] },
     title: { type: String, default: '' },

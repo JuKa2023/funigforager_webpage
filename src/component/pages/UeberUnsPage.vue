@@ -56,7 +56,7 @@
             <img
               :src="member.avatar"
               :alt="member.name"
-              class="absolute -top-8 -left-4 w-28 md:w-32 select-none drop-shadow-2xl pointer-events-none"
+              class="absolute top-12 -left-4 w-40 md:w-50 select-none drop-shadow-2xl pointer-events-none"
             />
 
             <!-- card -->
@@ -81,6 +81,8 @@
 <script setup lang="ts">
 import HeroHeader from '../HeroHeader.vue'
 import heroImage from '../../assets/hintergrundbild/platzhalter_wald.jpeg'
+import JulieImage from '../../assets/3Dcharacter_julie.png'
+import NadiaImage from '../../assets/3Dcharacter_nadia.png'
 
 type Member = {
   name: string
@@ -91,12 +93,12 @@ type Member = {
 const team: Member[] = [
   {
     name: 'Nadia Giliberti',
-    avatar: heroImage,
+    avatar: NadiaImage,
     roles: ['3D-Design', 'Game Design', 'Logik'],
   },
   {
     name: 'Juliette Kauflin',
-    avatar: heroImage,
+    avatar: JulieImage,
     roles: ['UX/ Webdesign', '3D-Design', 'Visuals'],
   },
 ]

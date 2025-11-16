@@ -16,6 +16,9 @@ h6 {
 }
 body {
   @apply font-montserrat;
+  cursor:
+    url('./assets/pilz_icon.png') 16 16,
+    auto;
 }
 
 /* Headings & text */
@@ -38,10 +41,10 @@ p {
 
 .parallax-main {
   background: linear-gradient(
-  to top,
-  rgba(3, 22, 0, 0) 30%,   /* transparent */
-  rgba(5, 38, 0, 1) 100%   /* opaque */
-);
+    to top,
+    rgba(3, 22, 0, 0) 30%,
+    /* transparent */ rgba(5, 38, 0, 1) 100% /* opaque */
+  );
 }
 
 @layer components {
@@ -83,4 +86,8 @@ p {
   .feature-item--full {
     @apply w-full; /* default on mobile */
   }
+}
+
+body {
+  cursor: url('/src/assets/pilz_icon.png'), auto;
 }

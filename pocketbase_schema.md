@@ -11,7 +11,6 @@
 | `edibility` | **Text** | Edibility status ("Speisewert") |
 | `confusion_risk` | **Text** | Dangerous lookalikes ("Verwechslungsgefahr") |
 | `tipp` | **Text** | Extra tips or fun facts ("Tipp") |
-| `image` | **File** | Max file size: ~5MB. MIME types: images (jpg, png, etc.) |
-| `mushroom_3d_model` | **File** | Max file size: ~10MB. MIME types: `.glb` (or whatever 3D format you use) |
+| `mushroom_3d_model` | **Text** | Max file size: ~10MB. MIME types: `.glb` (or whatever 3D format you use) |
 
 1.  Click **"Create"**.

@@ -18,11 +18,11 @@
               </div>
             </div>
             <div class="w-1/2 font-serif text-gray-700">
-              <div class="mb-2">
+              <div v-if="currentMushroomLeft.latin_name" class="mb-2">
                 <span class="font-bold block text-sm uppercase tracking-wider text-gray-500">Latein</span>
                 <span class="italic">{{ currentMushroomLeft.latin_name }}</span>
               </div>
-              <div>
+              <div v-if="currentMushroomLeft.description">
                 <span class="font-bold block text-sm uppercase tracking-wider text-gray-500 underline mb-1">Aussehen</span>
                 <p class="text-sm leading-relaxed">{{ currentMushroomLeft.description }}</p>
               </div>
@@ -30,25 +30,25 @@
           </div>
 
           <div class="space-y-4 font-serif text-gray-700 text-sm overflow-y-auto pr-2 custom-scrollbar">
-            <div>
+            <div v-if="currentMushroomLeft.size">
               <span class="font-bold block underline mb-1">Grösse</span>
               <p>{{ currentMushroomLeft.size }}</p>
             </div>
-            <div>
+            <div v-if="currentMushroomLeft.location">
               <span class="font-bold block underline mb-1">Standort</span>
               <p>{{ currentMushroomLeft.location }}</p>
             </div>
-            <div>
+            <div v-if="currentMushroomLeft.season">
               <span class="font-bold block underline mb-1">Erscheinungszeit</span>
               <p>{{ currentMushroomLeft.season }}</p>
             </div>
-            <div>
+            <div v-if="currentMushroomLeft.edibility">
               <span class="font-bold block underline mb-1">Speisewert</span>
               <p :class="{'text-green-700': isEdible(currentMushroomLeft), 'text-red-700': isPoisonous(currentMushroomLeft)}">
                 {{ currentMushroomLeft.edibility }}
               </p>
             </div>
-            <div>
+            <div v-if="currentMushroomLeft.confusion_risk">
               <span class="font-bold block underline mb-1">Verwechslungsgefahr</span>
               <p>{{ currentMushroomLeft.confusion_risk }}</p>
             </div>
@@ -77,11 +77,11 @@
               </div>
             </div>
             <div class="w-1/2 font-serif text-gray-700">
-              <div class="mb-2">
+              <div v-if="currentMushroomRight.latin_name" class="mb-2">
                 <span class="font-bold block text-sm uppercase tracking-wider text-gray-500">Latein</span>
                 <span class="italic">{{ currentMushroomRight.latin_name }}</span>
               </div>
-              <div>
+              <div v-if="currentMushroomRight.description">
                 <span class="font-bold block text-sm uppercase tracking-wider text-gray-500 underline mb-1">Aussehen</span>
                 <p class="text-sm leading-relaxed">{{ currentMushroomRight.description }}</p>
               </div>
@@ -89,29 +89,29 @@
           </div>
 
           <div class="space-y-4 font-serif text-gray-700 text-sm overflow-y-auto pr-2 custom-scrollbar">
-            <div>
+            <div v-if="currentMushroomRight.size">
               <span class="font-bold block underline mb-1">Grösse</span>
               <p>{{ currentMushroomRight.size }}</p>
             </div>
-            <div>
+            <div v-if="currentMushroomRight.location">
               <span class="font-bold block underline mb-1">Standort</span>
               <p>{{ currentMushroomRight.location }}</p>
             </div>
-            <div>
+            <div v-if="currentMushroomRight.season">
               <span class="font-bold block underline mb-1">Erscheinungszeit</span>
               <p>{{ currentMushroomRight.season }}</p>
             </div>
-            <div>
+            <div v-if="currentMushroomRight.edibility">
               <span class="font-bold block underline mb-1">Speisewert</span>
               <p :class="{'text-green-700': isEdible(currentMushroomRight), 'text-red-700': isPoisonous(currentMushroomRight)}">
                 {{ currentMushroomRight.edibility }}
               </p>
             </div>
-            <div>
+            <div v-if="currentMushroomRight.confusion_risk">
               <span class="font-bold block underline mb-1">Verwechslungsgefahr</span>
               <p>{{ currentMushroomRight.confusion_risk }}</p>
             </div>
-            <div>
+            <div v-if="currentMushroomRight.tipp">
               <span class="font-bold block underline mb-1">Tipp</span>
               <p class="italic text-gray-600">{{ currentMushroomRight.tipp }}</p>
             </div>

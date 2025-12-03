@@ -26,6 +26,31 @@
         {{ subtitle }}
       </p>
     </div>
+
+    <!-- Scroll Indicator -->
+    <div 
+      v-if="fullScreen"
+      class="scroll-indicator"
+      :style="scrollIndicatorStyle"
+    >
+      <p class="scroll-text">runter scrollen</p>
+      <svg 
+        class="scroll-arrow" 
+        width="24" 
+        height="24" 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path 
+          d="M12 5V19M12 19L5 12M12 19L19 12" 
+          stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
   </header>
 </template>
 
@@ -162,10 +187,60 @@ const titleStyle = computed(() => {
 
   return style
 })
+
+// Scroll indicator fades out quickly as user scrolls
+const scrollIndicatorStyle = computed(() => {
+  // Fade out faster than the title (multiply by 2 for quicker fade)
+  const fadeProgress = Math.min(scrollProgress.value * 2, 1)
+  const opacity = Math.max(1 - fadeProgress, 0)
+  
+  return {
+    opacity: opacity,
+    transition: 'opacity 200ms ease-out'
+  }
+})
 </script>
 
 <style scoped>
 header {
   transition: opacity 200ms ease;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.scroll-text {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+.scroll-arrow {
+  color: white;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 </style>

@@ -1,6 +1,13 @@
 # Fungi Forager Webseite
 
-Eine Vue 3 + TypeScript Webanwendung zum Erkunden und Lernen über Pilze, mit einem interaktiven Pilzlexikon und 3D-Modellen.
+Ein Projekt von:
+- [@JuKa2023](https://github.com/JuKa2023)
+- [@Nadiagiliberti](https://github.com/SophiaIseli)
+
+„Fungi Forager“ ist ein interaktives Lernspiel, das Spieler:innen in eine realistisch gestaltete Waldumgebung entführt, um fundiertes Basiswissen zur Pilzbestimmung zu 
+vermitteln. Der Spielumfang umfasst die Suche, Erfassung und Klassifizierung von ca. 20 ausgewählten Pilzarten (essbar, ungeniessbar, giftig), die im Laufe des Spiels im integrierten Lexikon freigeschaltet und mit Bildern, Merkmalen und Hintergrundwissen versehen werden. Die zentralen Lernziele sind:
+• Die Unterscheidung zwischen essbaren und giftigen Pilzen
+• Das Erkennen typischer Merkmale (Farbe, Lamellenstruktur und Hutform)
 
 ## Verwendete Ressourcen
 
@@ -11,13 +18,11 @@ Eine Vue 3 + TypeScript Webanwendung zum Erkunden und Lernen über Pilze, mit ei
 Beide Schriftarten werden von Google Fonts geladen und als CSS Custom Properties in `src/style.css` definiert.
 
 ### Eigene Assets
-- **Eigener Cursor** - Pilz-Icon (`src/assets/pilz_icon.png`) wird als Seiten-Cursor verwendet
 - **3D-Modelle** - Pilz-GLB-Modelle gespeichert im `public/mushroom/` Verzeichnis
 
 ### Technologien
 - **Vue 3** - Progressives JavaScript Framework
 - **TypeScript** - Typsicheres JavaScript
-- **Vite** - Schnelles Build-Tool und Dev-Server
 - **Tailwind CSS** - Utility-First CSS Framework
 - **PocketBase** - Backend-Datenbank für Pilzdaten
 - **Three.js** - 3D-Modell-Rendering
@@ -86,19 +91,3 @@ npm run lint
 npm run format
 ```
 
-## Empfohlenes IDE-Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (und Vetur deaktivieren).
-
-## Empfohlenes Browser-Setup
-
-- Chromium-basierte Browser (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Custom Object Formatter in Chrome DevTools aktivieren](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Custom Object Formatter in Firefox DevTools aktivieren](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Zusätzliche Konfiguration
-
-Siehe [Vite Configuration Reference](https://vite.dev/config/) für weitere Anpassungsoptionen.

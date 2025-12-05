@@ -21,40 +21,40 @@
           <!-- Flowing Text Content -->
           <div class="font-serif text-gray-700 text-sm">
             <div v-if="currentMushroomLeft.latin_name" class="mb-3">
-              <span class="font-bold block text-sm uppercase tracking-wider text-gray-500">Latein</span>
-              <span class="italic">{{ currentMushroomLeft.latin_name }}</span>
+              <span class="font-architect font-bold block text-lg">Latein</span>
+              <p class="font-montserrat text-xs leading-relaxed">{{ currentMushroomLeft.latin_name }}</p>
             </div>
             
             <div v-if="currentMushroomLeft.description" class="mb-3">
-              <span class="font-bold block text-sm uppercase tracking-wider text-gray-500 underline mb-1">Aussehen</span>
-              <p class="leading-relaxed">{{ currentMushroomLeft.description }}</p>
+              <span class="font-architect font-bold block text-lg">Aussehen</span>
+              <p class="font-montserrat text-xs leading-relaxed">{{ currentMushroomLeft.description }}</p>
             </div>
 
             <div v-if="currentMushroomLeft.size" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Grösse</span>
-              <p>{{ currentMushroomLeft.size }}</p>
+              <span class="font-architect font-bold block text-lg">Grösse</span>
+              <p class="font-montserrat text-xs">{{ currentMushroomLeft.size }}</p>
             </div>
             
             <div v-if="currentMushroomLeft.location" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Standort</span>
-              <p>{{ currentMushroomLeft.location }}</p>
+              <span class="font-architect font-bold block text-lg">Standort</span>
+              <p class="font-montserrat text-xs">{{ currentMushroomLeft.location }}</p>
             </div>
             
             <div v-if="currentMushroomLeft.season" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Erscheinungszeit</span>
-              <p>{{ currentMushroomLeft.season }}</p>
+              <span class="font-architect font-bold block text-lg">Erscheinungszeit</span>
+              <p class="font-montserrat text-xs">{{ currentMushroomLeft.season }}</p>
             </div>
             
             <div v-if="currentMushroomLeft.edibility" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Speisewert</span>
-              <p :class="{'text-green-700': isEdible(currentMushroomLeft), 'text-red-700': isPoisonous(currentMushroomLeft)}">
+              <span class="font-architect font-bold block text-lg">Speisewert</span>
+              <p class="font-montserrat text-xs" :class="{'text-green-700': isEdible(currentMushroomLeft), 'text-red-700': isPoisonous(currentMushroomLeft)}">
                 {{ currentMushroomLeft.edibility }}
               </p>
             </div>
             
             <div v-if="currentMushroomLeft.confusion_risk" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Verwechslungsgefahr</span>
-              <p>{{ currentMushroomLeft.confusion_risk }}</p>
+              <span class="font-architect font-bold block text-lg">Verwechslungsgefahr</span>
+              <p class="font-montserrat text-xs">{{ currentMushroomLeft.confusion_risk }}</p>
             </div>
           </div>
 
@@ -84,45 +84,45 @@
           <!-- Flowing Text Content -->
           <div class="font-serif text-gray-700 text-sm">
             <div v-if="currentMushroomRight.latin_name" class="mb-3">
-              <span class="font-bold block text-sm uppercase tracking-wider text-gray-500">Latein</span>
-              <span class="italic">{{ currentMushroomRight.latin_name }}</span>
+              <span class="font-architect font-bold block text-lg">Latein</span>
+              <p class="font-montserrat text-xs leading-relaxed">{{ currentMushroomRight.latin_name }}</p>
             </div>
             
             <div v-if="currentMushroomRight.description" class="mb-3">
-              <span class="font-bold block text-sm uppercase tracking-wider text-gray-500 underline mb-1">Aussehen</span>
-              <p class="leading-relaxed">{{ currentMushroomRight.description }}</p>
+              <span class="font-architect font-bold block text-lg">Aussehen</span>
+              <p class="font-montserrat text-xs leading-relaxed">{{ currentMushroomRight.description }}</p>
             </div>
 
             <div v-if="currentMushroomRight.size" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Grösse</span>
-              <p>{{ currentMushroomRight.size }}</p>
+              <span class="font-architect font-bold block text-lg">Grösse</span>
+              <p class="font-montserrat text-xs">{{ currentMushroomRight.size }}</p>
             </div>
             
             <div v-if="currentMushroomRight.location" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Standort</span>
-              <p>{{ currentMushroomRight.location }}</p>
+              <span class="font-architect font-bold block text-lg">Standort</span>
+              <p class="font-montserrat text-xs">{{ currentMushroomRight.location }}</p>
             </div>
             
             <div v-if="currentMushroomRight.season" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Erscheinungszeit</span>
-              <p>{{ currentMushroomRight.season }}</p>
+              <span class="font-architect font-bold block text-lg">Erscheinungszeit</span>
+              <p class="font-montserrat text-xs">{{ currentMushroomRight.season }}</p>
             </div>
             
             <div v-if="currentMushroomRight.edibility" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Speisewert</span>
-              <p :class="{'text-green-700': isEdible(currentMushroomRight), 'text-red-700': isPoisonous(currentMushroomRight)}">
+              <span class="font-architect font-bold block text-lg">Speisewert</span>
+              <p class="font-montserrat text-xs" :class="{'text-green-700': isEdible(currentMushroomRight), 'text-red-700': isPoisonous(currentMushroomRight)}">
                 {{ currentMushroomRight.edibility }}
               </p>
             </div>
             
             <div v-if="currentMushroomRight.confusion_risk" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Verwechslungsgefahr</span>
-              <p>{{ currentMushroomRight.confusion_risk }}</p>
+              <span class="font-architect font-bold block text-lg">Verwechslungsgefahr</span>
+              <p class="font-montserrat text-xs">{{ currentMushroomRight.confusion_risk }}</p>
             </div>
             
             <div v-if="currentMushroomRight.tipp" class="mb-3">
-              <span class="font-bold block underline mb-0.5">Tipp</span>
-              <p class="italic text-gray-600">{{ currentMushroomRight.tipp }}</p>
+              <span class="font-architect font-bold block text-lg">Tipp</span>
+              <p class="font-montserrat text-xs italic text-gray-600">{{ currentMushroomRight.tipp }}</p>
             </div>
           </div>
 
@@ -214,16 +214,6 @@ const isPoisonous = (mushroom: Mushroom) => {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap');
-
-.font-handwriting {
-  font-family: 'Patrick Hand', cursive;
-}
-
-.font-serif {
-  font-family: 'Crimson Text', serif;
-}
-
 .book {
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
 }

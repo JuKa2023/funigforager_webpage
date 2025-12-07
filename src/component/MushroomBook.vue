@@ -6,14 +6,13 @@
         <div v-if="currentMushroomLeft" class="h-full pb-8 overflow-y-auto pr-2 custom-scrollbar">
           <h2 class="text-4xl font-handwriting mb-3 text-gray-800">{{ currentMushroomLeft.name }}</h2>
 
-          <!-- Floating Image -->
+          <!-- 3D Model Viewer -->
           <div class="float-left w-[45%] mr-4 mb-3">
             <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden border-4 border-[#e8dcc5] shadow-inner">
-              <img
-                v-if="currentMushroomLeft.image"
-                :src="getImageUrl(currentMushroomLeft)"
-                :alt="currentMushroomLeft.name"
-                class="w-full h-full object-cover"
+              <MushroomModelViewer
+                v-if="currentMushroomLeft.mushroom_3d_model"
+                :modelPath="currentMushroomLeft.mushroom_3d_model"
+                class="w-full h-full"
               />
             </div>
           </div>
@@ -69,14 +68,13 @@
         <div v-if="currentMushroomRight" class="h-full pb-8 overflow-y-auto pr-2 custom-scrollbar">
           <h2 class="text-4xl font-handwriting mb-3 text-gray-800">{{ currentMushroomRight.name }}</h2>
 
-          <!-- Floating Image -->
+          <!-- 3D Model Viewer -->
           <div class="float-left w-[45%] mr-4 mb-3">
             <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden border-4 border-[#e8dcc5] shadow-inner">
-              <img
-                v-if="currentMushroomRight.image"
-                :src="getImageUrl(currentMushroomRight)"
-                :alt="currentMushroomRight.name"
-                class="w-full h-full object-cover"
+              <MushroomModelViewer
+                v-if="currentMushroomRight.mushroom_3d_model"
+                :modelPath="currentMushroomRight.mushroom_3d_model"
+                class="w-full h-full"
               />
             </div>
           </div>
@@ -163,6 +161,7 @@
 import { computed, ref } from 'vue'
 import type { Mushroom } from '@/types'
 import { pb } from '@/lib/pocketbase'
+import MushroomModelViewer from './MushroomModelViewer.vue'
 
 const props = defineProps<{
   mushrooms: Mushroom[]

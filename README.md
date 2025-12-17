@@ -2,7 +2,7 @@
 
 Ein Projekt von:
 - [@JuKa2023](https://github.com/JuKa2023)
-- [@Nadiagiliberti](https://github.com/SophiaIseli)
+- [@Nadiagiliberti](https://github.com/NadiaGiliberti)
 
 „Fungi Forager“ ist ein interaktives Lernspiel, das Spieler:innen in eine realistisch gestaltete Waldumgebung entführt, um fundiertes Basiswissen zur Pilzbestimmung zu 
 vermitteln. Der Spielumfang umfasst die Suche, Erfassung und Klassifizierung von ca. 20 ausgewählten Pilzarten (essbar, ungeniessbar, giftig), die im Laufe des Spiels im integrierten Lexikon freigeschaltet und mit Bildern, Merkmalen und Hintergrundwissen versehen werden. Die zentralen Lernziele sind:

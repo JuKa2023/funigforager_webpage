@@ -10,6 +10,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 const props = defineProps<{
   modelPath: string
+  edibility?: 'edible' | 'poisonous' | 'neutral' | string
 }>()
 
 const containerRef = ref<HTMLDivElement | null>(null)
@@ -25,7 +26,7 @@ const initScene = () => {
 
   // Scene setup
   scene = new THREE.Scene()
-  scene.background = new THREE.Color(0xf5f5f5)
+  updateBackgroundColor()
 
   // Camera setup
   const width = containerRef.value.clientWidth
@@ -186,6 +187,25 @@ watch(() => props.modelPath, (newPath) => {
     loadModel(newPath)
   }
 })
+
+// Watch for edibility changes
+watch(() => props.edibility, () => {
+  updateBackgroundColor()
+})
+
+const updateBackgroundColor = () => {
+  if (!scene) return
+  
+  let color = 0xf5f5f5 // Default gray
+  
+  if (props.edibility === 'edible') {
+    color = 0xe6ffe6 // Light green
+  } else if (props.edibility === 'poisonous') {
+    color = 0xffe6e6 // Light red
+  }
+  
+  scene.background = new THREE.Color(color)
+}
 </script>
 
 <style scoped>

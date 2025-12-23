@@ -12,6 +12,7 @@
               <MushroomModelViewer
                 v-if="currentMushroomLeft.mushroom_3d_model"
                 :modelPath="currentMushroomLeft.mushroom_3d_model"
+                :edibility="getEdibilityType(currentMushroomLeft)"
                 class="w-full h-full"
               />
             </div>
@@ -74,6 +75,7 @@
               <MushroomModelViewer
                 v-if="currentMushroomRight.mushroom_3d_model"
                 :modelPath="currentMushroomRight.mushroom_3d_model"
+                :edibility="getEdibilityType(currentMushroomRight)"
                 class="w-full h-full"
               />
             </div>
@@ -209,6 +211,12 @@ const isEdible = (mushroom: Mushroom) => {
 const isPoisonous = (mushroom: Mushroom) => {
   const text = mushroom.edibility?.toLowerCase() || ''
   return text.includes('giftig') || text.includes('tödlich') || text.includes('ungenießbar')
+}
+
+const getEdibilityType = (mushroom: Mushroom) => {
+  if (isEdible(mushroom)) return 'edible'
+  if (isPoisonous(mushroom)) return 'poisonous'
+  return 'neutral'
 }
 </script>
 

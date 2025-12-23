@@ -21,39 +21,39 @@
           <!-- Flowing Text Content -->
           <div class="font-serif text-gray-700 text-sm">
             <div v-if="currentMushroomLeft.latin_name" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Latein</span>
+              <span class="font-architect font-bold block text-base">Latein</span>
               <p class="font-montserrat text-xs leading-relaxed">{{ currentMushroomLeft.latin_name }}</p>
             </div>
 
             <div v-if="currentMushroomLeft.description" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Aussehen</span>
+              <span class="font-architect font-bold block text-base">Aussehen</span>
               <p class="font-montserrat text-xs leading-relaxed">{{ currentMushroomLeft.description }}</p>
             </div>
 
             <div v-if="currentMushroomLeft.size" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Grösse</span>
+              <span class="font-architect font-bold block text-base">Grösse</span>
               <p class="font-montserrat text-xs">{{ currentMushroomLeft.size }}</p>
             </div>
 
             <div v-if="currentMushroomLeft.location" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Standort</span>
+              <span class="font-architect font-bold block text-base">Standort</span>
               <p class="font-montserrat text-xs">{{ currentMushroomLeft.location }}</p>
             </div>
 
             <div v-if="currentMushroomLeft.season" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Erscheinungszeit</span>
+              <span class="font-architect font-bold block text-base">Erscheinungszeit</span>
               <p class="font-montserrat text-xs">{{ currentMushroomLeft.season }}</p>
             </div>
 
             <div v-if="currentMushroomLeft.edibility" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Speisewert</span>
+              <span class="font-architect font-bold block text-base">Speisewert</span>
               <p class="font-montserrat text-xs" :class="{'text-green-700': isEdible(currentMushroomLeft), 'text-red-700': isPoisonous(currentMushroomLeft)}">
                 {{ currentMushroomLeft.edibility }}
               </p>
             </div>
 
             <div v-if="currentMushroomLeft.confusion_risk" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Verwechslungsgefahr</span>
+              <span class="font-architect font-bold block text-base">Verwechslungsgefahr</span>
               <p class="font-montserrat text-xs">{{ currentMushroomLeft.confusion_risk }}</p>
             </div>
           </div>
@@ -84,44 +84,44 @@
           <!-- Flowing Text Content -->
           <div class="font-serif text-gray-700 text-sm">
             <div v-if="currentMushroomRight.latin_name" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Latein</span>
+              <span class="font-architect font-bold block text-base">Latein</span>
               <p class="font-montserrat text-xs leading-relaxed">{{ currentMushroomRight.latin_name }}</p>
             </div>
 
             <div v-if="currentMushroomRight.description" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Aussehen</span>
+              <span class="font-architect font-bold block text-base">Aussehen</span>
               <p class="font-montserrat text-xs leading-relaxed">{{ currentMushroomRight.description }}</p>
             </div>
 
             <div v-if="currentMushroomRight.size" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Grösse</span>
+              <span class="font-architect font-bold block text-base">Grösse</span>
               <p class="font-montserrat text-xs">{{ currentMushroomRight.size }}</p>
             </div>
 
             <div v-if="currentMushroomRight.location" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Standort</span>
+              <span class="font-architect font-bold block text-base">Standort</span>
               <p class="font-montserrat text-xs">{{ currentMushroomRight.location }}</p>
             </div>
 
             <div v-if="currentMushroomRight.season" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Erscheinungszeit</span>
+              <span class="font-architect font-bold block text-base">Erscheinungszeit</span>
               <p class="font-montserrat text-xs">{{ currentMushroomRight.season }}</p>
             </div>
 
             <div v-if="currentMushroomRight.edibility" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Speisewert</span>
+              <span class="font-architect font-bold block text-base">Speisewert</span>
               <p class="font-montserrat text-xs" :class="{'text-green-700': isEdible(currentMushroomRight), 'text-red-700': isPoisonous(currentMushroomRight)}">
                 {{ currentMushroomRight.edibility }}
               </p>
             </div>
 
             <div v-if="currentMushroomRight.confusion_risk" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Verwechslungsgefahr</span>
+              <span class="font-architect font-bold block text-base">Verwechslungsgefahr</span>
               <p class="font-montserrat text-xs">{{ currentMushroomRight.confusion_risk }}</p>
             </div>
 
             <div v-if="currentMushroomRight.tipp" class="mb-3">
-              <span class="font-architect font-bold block text-lg">Tipp</span>
+              <span class="font-architect font-bold block text-base">Tipp</span>
               <p class="font-montserrat text-xs italic text-gray-600">{{ currentMushroomRight.tipp }}</p>
             </div>
           </div>

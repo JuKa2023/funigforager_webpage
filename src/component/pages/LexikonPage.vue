@@ -28,7 +28,7 @@
 import { ref, onMounted } from 'vue'
 import { pb } from '@/lib/pocketbase'
 import type { Mushroom } from '@/types'
-import MushroomBook from '@/component/MushroomBook.vue'
+import MushroomBook from '@/component/lexikon/MushroomBook.vue'
 
 defineProps({
   title: { type: String, default: 'Pilzlexikon' }

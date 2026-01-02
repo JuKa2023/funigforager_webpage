@@ -51,17 +51,17 @@
         <h2 class="text-2xl md:text-3xl font-semibold text-white">Unser Team</h2>
 
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <li v-for="member in team" :key="member.name" class="relative">
+          <li v-for="member in team" :key="member.name" class="relative group">
             <!-- avatar overlapping the card -->
             <img
               :src="member.avatar"
               :alt="member.name"
-              class="absolute top-12 -left-4 w-40 md:w-50 select-none drop-shadow-2xl pointer-events-none"
+              class="absolute top-4 -left-4 w-40 md:w-50 select-none drop-shadow-2xl pointer-events-none transition-transform duration-300 ease-out group-hover:scale-110 origin-bottom-left z-10"
             />
 
             <!-- card -->
             <article
-              class="bg-amber-200/90 text-emerald-950 rounded-s shadow-xl p-6 pl-28 md:pl-32 min-h-38 flex flex-col justify-center"
+              class="bg-amber-200/90 text-emerald-950 rounded-s shadow-xl p-6 pl-28 md:pl-32 min-h-38 flex flex-col justify-center transition-transform duration-300 ease-out group-hover:scale-105 group-hover:bg-amber-200"
             >
               <h3 class="text-lg md:text-xl font-semibold">{{ member.name }}</h3>
               <ul class="mt-2 space-y-1 text-sm md:text-base">

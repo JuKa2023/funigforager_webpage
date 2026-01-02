@@ -55,6 +55,6 @@ import NewsSection from '../News.vue'
 import HeroHeader from '../HeroHeader.vue'
 import Button from '../Button.vue'
 import { newsItems } from '../../data/news.ts'
-import heroImage from '../../assets/hintergrundbild/platzhalter_wald.jpeg'
+import heroImage from '../../assets/hintergrundbild/wald_von_oben.png'
 const articles = ref(newsItems)
 </script>

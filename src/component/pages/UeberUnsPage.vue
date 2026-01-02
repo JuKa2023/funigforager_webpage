@@ -89,7 +89,7 @@
 
 <script setup lang="ts">
 import HeroHeader from '../HeroHeader.vue'
-import heroImage from '../../assets/hintergrundbild/platzhalter_wald.jpeg'
+import heroImage from '../../assets/hintergrundbild/pilzwald.png'
 import JulieImage from '../../assets/3Dcharacter_julie.png'
 import NadiaImage from '../../assets/3Dcharacter_nadia.png'
 

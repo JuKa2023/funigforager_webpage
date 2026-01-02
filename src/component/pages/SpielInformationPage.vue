@@ -123,5 +123,5 @@
 
 <script setup lang="ts">
 import HeroHeader from '../HeroHeader.vue'
-import heroImage from '../../assets/hintergrundbild/platzhalter_wald.jpeg'
+import heroImage from '../../assets/hintergrundbild/pilzwald.png'
 </script>

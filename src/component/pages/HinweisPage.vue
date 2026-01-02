@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import heroImage from '../../assets/hintergrundbild/platzhalter_wald.jpeg'
+import heroImage from '../../assets/hintergrundbild/pilzwald.png'
 import HeroHeader from '../HeroHeader.vue'
 
 type Section = {

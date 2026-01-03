@@ -1,20 +1,16 @@
 <!-- src/component/layout/BasePage.vue -->
 <template>
-
-
   <main class="min-h-screen bg-[#031600] text-white">
     <header class="h-24 pt-40">
       <div class="relative text-center px-4">
-        <h1 class="text-3xl md:text-5xl font-bold text-white">Hinweis
-        </h1>
+        <h1 class="text-3xl md:text-5xl font-bold text-white">Hinweis</h1>
       </div>
     </header>
     <div class="mx-auto max-w-4xl px-6 py-12 md:py-16 mt-10">
-
       <!-- Intro lead -->
       <p class="mx-auto max-w-prose text-white leading-relaxed mb-10">
-        Die Inhalte dieses Pilzsammel-Spiels und -Lexikons dienen ausschliesslich zu Unterhaltungs- und
-        Lernzwecken. Sie stellen keine verlässliche Entscheidungsgrundlage für das tatsächliche
+        Die Inhalte dieses Pilzsammel-Spiels und -Lexikons dienen ausschliesslich zu Unterhaltungs-
+        und Lernzwecken. Sie stellen keine verlässliche Entscheidungsgrundlage für das tatsächliche
         Sammeln wildwachsender Pilze dar.
       </p>
 
@@ -53,33 +49,35 @@ const sections: Section[] = [
     title: 'Kein Ersatz für Expertenwissen',
     body:
       'Unser Spiel und das begleitende Pilzlexikon können eine fachkundige Beratung nicht ersetzen. ' +
-      'Pilze sicher zu bestimmen, erfordert langjährige Erfahrung und botanisch-mykologisches Fachwissen.'
+      'Pilze sicher zu bestimmen, erfordert langjährige Erfahrung und botanisch-mykologisches Fachwissen.',
   },
   {
     title: 'Unverzichtbare Expertenkontrolle',
     body:
       'Bevor du wild wachsende Pilze sammelst oder verhst, müssen die Exemplare unbedingt ' +
       'von einem qualifizierten Pilzsachverständigen oder einer anerkannten Pilzberatungsstelle ' +
-      'begutachtet und freigegeben werden.'
+      'begutachtet und freigegeben werden.',
   },
   {
     title: 'Haftungsausschluss',
     body:
       'Wir übernehmen keinerlei Haftung für Schäden, Vergiftungen oder sonstige Folgen, die durch ' +
       'eigenmächtiges Sammeln und Verzehren von Pilzen entstehen. Jegliche Nutzung der hier gezeigten ' +
-      'Informationen erfolgt auf eigenes Risiko.'
+      'Informationen erfolgt auf eigenes Risiko.',
   },
   {
     title: 'Keine Garantien',
     body:
       'Trotz grösster Sorgfalt können weder Vollständigkeit noch Richtigkeit der Angaben garantiert werden. ' +
       'Variationen in Aussehen, Standort und Entwicklungsstadium einzelner Pilzarten können eine sichere ' +
-      'Bestimmung erschweren oder unmöglich machen.'
-  }
+      'Bestimmung erschweren oder unmöglich machen.',
+  },
 ]
 </script>
 
 <style scoped>
 /* Optional: gentle heading spacing similar to your screenshot */
-h1 { letter-spacing: 0.02em; }
+h1 {
+  letter-spacing: 0.02em;
+}
 </style>

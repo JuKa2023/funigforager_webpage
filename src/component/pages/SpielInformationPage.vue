@@ -28,8 +28,8 @@
       <section class="max-w-5xl mx-auto px-4 py-10 mt-24">
         <h2 class="text-3xl font-bold mb-6 text-white">Für wen ist das Spiel?</h2>
         <p class="text-m mb-6 text-white">
-          Ganz egal, ob du Gamer:in oder Naturliebhaber:in bist – hier wirst du auf spielerische Weise
-          zur Pilzexpert:in!
+          Ganz egal, ob du Gamer:in oder Naturliebhaber:in bist – hier wirst du auf spielerische
+          Weise zur Pilzexpert:in!
         </p>
       </section>
 
@@ -54,9 +54,7 @@
                 <img src="@/assets/pilz_icon.png" alt="Mushroom Icon" class="feature-icon" />
                 <div class="space-y-1">
                   <p class="feature-title">Untersuchen</p>
-                  <p class="feature-text">
-                    Betrachte sie genau: Form, Farbe, Lamellen, Geruch.
-                  </p>
+                  <p class="feature-text">Betrachte sie genau: Form, Farbe, Lamellen, Geruch.</p>
                 </div>
               </li>
 
@@ -64,9 +62,7 @@
                 <img src="@/assets/pilz_icon.png" alt="Mushroom Icon" class="feature-icon" />
                 <div class="space-y-1">
                   <p class="feature-title">Entscheiden</p>
-                  <p class="feature-text">
-                    Ist der Pilz essbar oder giftig?
-                  </p>
+                  <p class="feature-text">Ist der Pilz essbar oder giftig?</p>
                 </div>
               </li>
 
@@ -117,7 +113,7 @@
           </div>
         </div>
       </section>
-    </diV>
+    </div>
   </main>
 </template>
 

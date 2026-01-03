@@ -1,46 +1,38 @@
 <template>
-  <header
-    ref="headerRef"
-    class="header-paper fixed top-0 left-0 right-0 z-50 w-full shadow-lg"
-  >
+  <header ref="headerRef" class="header-paper fixed top-0 left-0 right-0 z-50 w-full shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
-
-        <img class="text-xl font-bold" src="" alt="Logo" />
-          <router-link to="/"></router-link>
-        </img>
+        <router-link to="/">
+          <img class="text-xl font-bold" src="" alt="Logo" />
+        </router-link>
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex space-x-10 text-lg">
-          <router-link
-            to="/"
-            class="nav-link"
-            :class="{ 'invisible': $route.name === 'landing' }"
-          >Home</router-link>
+          <router-link to="/" class="nav-link" :class="{ invisible: $route.name === 'landing' }"
+            >Home</router-link
+          >
 
-          <router-link
-            to="/hinweis"
-            class="nav-link"
-            :class="{ 'hidden': $route.name === 'hinweis' }"
-          >Hinweis</router-link>
+          <router-link to="/hinweis" class="nav-link" :class="{ hidden: $route.name === 'hinweis' }"
+            >Hinweis</router-link
+          >
 
-          <router-link
-            to="/lexikon"
-            class="nav-link"
-            :class="{ 'hideen': $route.name === 'lexikon' }"
-          >Lexikon</router-link>
+          <router-link to="/lexikon" class="nav-link" :class="{ hideen: $route.name === 'lexikon' }"
+            >Lexikon</router-link
+          >
 
           <router-link
             to="/spielinformation"
             class="nav-link"
-            :class="{ 'hidden': $route.name === 'spielinformation' }"
-          >Spielinformation</router-link>
+            :class="{ hidden: $route.name === 'spielinformation' }"
+            >Spielinformation</router-link
+          >
 
           <router-link
             to="/ueberuns"
             class="nav-link"
-            :class="{ 'hidden': $route.name === 'ueberuns' }"
-          >Über Uns</router-link>
+            :class="{ hidden: $route.name === 'ueberuns' }"
+            >Über Uns</router-link
+          >
         </nav>
 
         <!-- Mobile Menu Button -->
@@ -58,41 +50,49 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div v-if="mobileOpen" class="md:hidden mobile-menu px-4 pb-4 space-y-2 text-right border-t border-white/20">
+    <div
+      v-if="mobileOpen"
+      class="md:hidden mobile-menu px-4 pb-4 space-y-2 text-right border-t border-white/20"
+    >
       <router-link
         to="/"
         class="nav-link block py-2"
-        :class="{'hidden': $route.name === 'landing' }"
-        @click="mobileOpen=false"
-      >Home</router-link>
+        :class="{ hidden: $route.name === 'landing' }"
+        @click="mobileOpen = false"
+        >Home</router-link
+      >
 
       <router-link
         to="/hinweis"
         class="nav-link block py-2"
-        :class="{'hidden': $route.name === 'hinweis' }"
-        @click="mobileOpen=false"
-      >Hinweis</router-link>
+        :class="{ hidden: $route.name === 'hinweis' }"
+        @click="mobileOpen = false"
+        >Hinweis</router-link
+      >
 
       <router-link
         to="/lexikon"
         class="nav-link block py-2"
-        :class="{'hidden': $route.name === 'lexikon' }"
-        @click="mobileOpen=false"
-      >Lexikon</router-link>
+        :class="{ hidden: $route.name === 'lexikon' }"
+        @click="mobileOpen = false"
+        >Lexikon</router-link
+      >
 
       <router-link
         to="/spielinformation"
         class="nav-link block py-2"
-        :class="{'hidden': $route.name === 'spielinformation' }"
-        @click="mobileOpen=false"
-      >Spielinformation</router-link>
+        :class="{ hidden: $route.name === 'spielinformation' }"
+        @click="mobileOpen = false"
+        >Spielinformation</router-link
+      >
 
       <router-link
         to="/ueberuns"
         class="nav-link block py-2"
-        :class="{'hidden': $route.name === 'ueberuns' }"
-        @click="mobileOpen=false"
-      >Über Uns</router-link>
+        :class="{ hidden: $route.name === 'ueberuns' }"
+        @click="mobileOpen = false"
+        >Über Uns</router-link
+      >
     </div>
   </header>
 </template>
@@ -141,14 +141,14 @@ onBeforeUnmount(() => {
 }
 
 .nav-link {
-  color: #AA0000;
+  color: #aa0000;
   transition: all 0.2s ease;
   text-decoration: none;
   font-weight: 500;
 }
 
 .nav-link:hover {
-  color: #CC0000;
+  color: #cc0000;
   transform: translateY(-1px);
 }
 </style>

@@ -16,7 +16,9 @@
     :textFadeStrength="1.2"
   />
   <main class="relative z-10">
-    <section class="relative pt-[120px] sm:pt-[180px] mx-auto max-w-5xl px-6 py-12 md:py-16 space-y-14 md:space-y-20">
+    <section
+      class="relative pt-[120px] sm:pt-[180px] mx-auto max-w-5xl px-6 py-12 md:py-16 space-y-14 md:space-y-20"
+    >
       <!-- Wer wir sind -->
       <div class="space-y-4">
         <h2 class="text-2xl md:text-3xl font-semibold text-white">Wer wir sind</h2>

@@ -146,7 +146,7 @@ const loadModel = (path: string) => {
       console.error('Error loading model:', error)
       console.log('Model URL:', modelUrl)
       console.log('Path:', path)
-    }
+    },
   )
 }
 
@@ -182,28 +182,34 @@ onUnmounted(() => {
 })
 
 // Watch for model path changes
-watch(() => props.modelPath, (newPath) => {
-  if (newPath) {
-    loadModel(newPath)
-  }
-})
+watch(
+  () => props.modelPath,
+  (newPath) => {
+    if (newPath) {
+      loadModel(newPath)
+    }
+  },
+)
 
 // Watch for edibility changes
-watch(() => props.edibility, () => {
-  updateBackgroundColor()
-})
+watch(
+  () => props.edibility,
+  () => {
+    updateBackgroundColor()
+  },
+)
 
 const updateBackgroundColor = () => {
   if (!scene) return
-  
+
   let color = 0xf5f5f5 // Default gray
-  
+
   if (props.edibility === 'edible') {
     color = 0xe6ffe6 // Light green
   } else if (props.edibility === 'poisonous') {
     color = 0xffe6e6 // Light red
   }
-  
+
   scene.background = new THREE.Color(color)
 }
 </script>

@@ -97,20 +97,20 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 const mobileOpen = ref(false)
-const headerRef = ref(null)
+const headerRef = ref<HTMLElement | null>(null)
 
 import BurgerIcon from '../assets/icons_burger.svg'
 import CloseIcon from '../assets/icons_close.svg'
 
-const handleClickOutside = (event) => {
+const handleClickOutside = (event: PointerEvent) => {
   // Falls das Menü geschlossen ist oder die Header-Referenz fehlt, nichts tun
   if (!mobileOpen.value || !headerRef.value) return
   // Spezifische Logik zum Schließen des Menüs, wenn außerhalb des Headers geklickt wird
-  if (!headerRef.value.contains(event.target)) {
+  if (!headerRef.value.contains(event.target as Node)) {
     mobileOpen.value = false
   }
 }

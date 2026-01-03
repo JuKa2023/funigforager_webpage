@@ -4,7 +4,7 @@
 
   <main class="min-h-screen bg-[#031600] text-white">
     <header class="h-24 pt-40">
-      <div class="relative text-center px-4" :style="titleStyle">
+      <div class="relative text-center px-4">
         <h1 class="text-3xl md:text-5xl font-bold text-white">Hinweis
         </h1>
       </div>

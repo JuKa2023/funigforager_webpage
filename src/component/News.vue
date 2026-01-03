@@ -60,9 +60,24 @@
 
   <script setup lang="ts">
   import { computed, onMounted } from 'vue'
+  import type { PropType } from 'vue'
+
+  interface ArticleLink {
+    href: string
+    label?: string
+  }
+
+  interface Article {
+    id?: string
+    date: string | Date
+    title: string
+    body?: string
+    points?: string[]
+    link?: ArticleLink
+  }
 
   const props = defineProps({
-    articles: { type: Array, default: () => [] },
+    articles: { type: Array as PropType<Article[]>, default: () => [] },
     title: { type: String, default: '' },
     newestFirst: { type: Boolean, default: true },
   })
@@ -71,15 +86,15 @@
 
   const sortedArticles = computed(() => {
     const arr = [...props.articles]
-    arr.sort((a, b) => new Date(a.date) - new Date(b.date))
+    arr.sort((a: Article, b: Article) => new Date(a.date).getTime() - new Date(b.date).getTime())
     return props.newestFirst ? arr.reverse() : arr
   })
 
-  function isoDate(d) {
+  function isoDate(d: string | Date): string {
     return new Date(d).toISOString().slice(0, 10)
   }
 
-  function formatMonthYear(d) {
+  function formatMonthYear(d: string | Date): string {
     const dt = new Date(d)
     return new Intl.DateTimeFormat('de-DE', {
       month: 'long',

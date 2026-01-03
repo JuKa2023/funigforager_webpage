@@ -54,8 +54,9 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
+import type { CSSProperties } from 'vue'
 
 const props = defineProps({
   title: { type: String, required: true },
@@ -150,11 +151,11 @@ const bgImageStyle = computed(() => {
 })
 
 // Overlay becomes darker with scroll
-const overlayStyle = computed(() => {
+const overlayStyle = computed((): CSSProperties => {
   if (!props.enableScrollEffects) {
     return {
       backgroundColor: `rgba(0, 0, 0, ${props.baseOverlayOpacity})`,
-      pointerEvents: 'none',
+      pointerEvents: 'none' as const,
     }
   }
 
@@ -164,13 +165,13 @@ const overlayStyle = computed(() => {
   return {
     backgroundColor: `rgba(0, 0, 0, ${opacity})`,
     transition: 'background-color 80ms linear',
-    pointerEvents: 'none',
+    pointerEvents: 'none' as const,
   }
 })
 
 // Text (H1 + P) moves + fades with scroll
-const titleStyle = computed(() => {
-  const style = {}
+const titleStyle = computed((): CSSProperties => {
+  const style: CSSProperties = {}
 
   // Movement
   if (props.scrollText) {
@@ -181,8 +182,8 @@ const titleStyle = computed(() => {
   // Fading
   if (props.fadeTextOnScroll) {
     const fadeProgress = scrollProgress.value // 0 → 1
-    const opacity = Math.max(1 - fadeProgress * props.textFadeStrength, 0)
-    style.opacity = opacity
+    const opacityVal = Math.max(1 - fadeProgress * props.textFadeStrength, 0)
+    style.opacity = opacityVal
   }
 
   return style

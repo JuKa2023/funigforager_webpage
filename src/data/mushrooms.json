@@ -24,7 +24,7 @@
     "edibilityStatus": "poisonous",
     "confusionRisk": ["Kaiserling (Amanita caesarea) – leuchtend orange, gelblicher Stiel"],
     "tip": null,
-    "modelPath": "pantherpilz.glb",
+    "modelPath": "amavita.glb",
     "updated": "2025-12-07 10:58:33.752Z"
   },
   {
@@ -52,7 +52,7 @@
     "edibilityStatus": "poisonous",
     "confusionRisk": ["Mit echtem Pfifferling (Cantharellus cibarius)"],
     "tip": null,
-    "modelPath": "falscherpfifferling.glb",
+    "modelPath": "falscher_pfifferling.glb",
     "updated": "2025-12-07 10:52:22.829Z"
   },
 
@@ -84,7 +84,7 @@
       "Mit essbaren Stäublingen im jungen Zustand, wenn das Innere noch weiss ist."
     ],
     "tip": null,
-    "modelPath": "kartoffelbovist.glb",
+    "modelPath": "bowist.glb",
     "updated": "2025-12-07 10:52:22.829Z"
   },
 
@@ -101,7 +101,7 @@
       "Mit giftigem Karbol-Champignon (Agaricus xanthodermus) und Knollenblätterpilzen"
     ],
     "tip": "Echter Wiesen-Champignon riecht angenehm pilzig, Karbol-Champignon nach Tinte oder Phenol.",
-    "modelPath": "wiesenchampignon.glb",
+    "modelPath": "champignon.glb",
     "updated": "2025-12-07 10:52:22.829Z"
   },
 
@@ -116,7 +116,7 @@
     "edibilityStatus": "poisonous",
     "confusionRisk": ["Mit essbarem Wiesen-Champignon (Agaricus campestris)"],
     "tip": null,
-    "modelPath": "karbolchampignon.glb",
+    "modelPath": "karbol_champignon.glb",
     "updated": "2025-12-07 10:52:22.829Z"
   },
 
@@ -131,7 +131,7 @@
     "edibilityStatus": "edible",
     "confusionRisk": ["Mit ungeniessbarem Gallenröhrling (Tylopilus felleus, bitter)"],
     "tip": "Ein kleines Stück roh probieren – bitter = Gallenröhrling, mild = Marone",
-    "modelPath": "maronenroehrling.glb",
+    "modelPath": "marronenroehrling.glb",
     "updated": "2025-12-07 10:56:47.916Z"
   },
 

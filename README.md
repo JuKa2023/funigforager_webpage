@@ -42,6 +42,7 @@ Best Practices:
 - Leere Inhalte als `null` statt leere Strings
 
 Feldübersicht:
+
 | Feld | Beschreibung |
 | --- | --- |
 | `name` | Deutscher Name |

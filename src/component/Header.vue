@@ -109,7 +109,7 @@ import CloseIcon from '../assets/icons_close.svg'
 const handleClickOutside = (event: PointerEvent) => {
   // Falls das Menü geschlossen ist oder die Header-Referenz fehlt, nichts tun
   if (!mobileOpen.value || !headerRef.value) return
-  // Spezifische Logik zum Schließen des Menüs, wenn außerhalb des Headers geklickt wird
+  // Spezifische Logik zum Schliessen des Menüs, wenn ausserhalb des Headers geklickt wird
   if (!headerRef.value.contains(event.target as Node)) {
     mobileOpen.value = false
   }

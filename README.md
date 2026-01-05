@@ -68,20 +68,20 @@ Feldübersicht:
 
 ### Schriftarten
 
-- **[Architects Daughter](https://fonts.google.com/specimen/Architects+Daughter)** – Überschriften
-- **[Montserrat](https://fonts.google.com/specimen/Montserrat)** – Fließtext
+- **[Architects Daughter](https://fonts.google.com/specimen/Architects+Daughter)** für die Überschriften
+- **[Montserrat](https://fonts.google.com/specimen/Montserrat)** für den Fliesstext
 
 ### Eigene Assets
 
-- **3D-Modelle** – GLB-Modelle in `public/mushroom/`
-- **WebGL-Build** – Unity-WebGL in `public/unity/forest/`
+- **3D-Modelle**: GLB-Modelle in `public/mushroom/`
+- **WebGL-Build**: Unity-WebGL in `public/unity/forest/`
 
 ### Technologien
 
-- **Vue 3** – UI-Framework
-- **TypeScript** – Typsicherheit
-- **Tailwind CSS** – Styling
-- **Three.js** – 3D-Rendering
+- **Vue 3**: UI-Framework
+- **TypeScript** : Typsicherheit
+- **Tailwind CSS**: Styling
+- **Three.js**: 3D-Rendering
 
 ## Projekt-Setup
 

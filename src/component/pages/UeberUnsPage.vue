@@ -54,7 +54,7 @@
           <li v-for="member in team" :key="member.name" class="relative group">
             <!--
               Avatar überlappt die Karte
-              - Absolute Positionierung, um es teilweise außerhalb der Karte zu platzieren
+              - Absolute Positionierung, um es teilweise ausserhalb der Karte zu platzieren
               - group-hover:scale-110 für Zoom-Effekt beim Hover
               - origin-bottom-left stellt sicher, dass es vom richtigen Punkt aus wächst
              -->
@@ -66,7 +66,7 @@
 
             <!--
               Karten-Styling
-              - group-hover:scale-105 für leichten Vergrößerungseffekt
+              - group-hover:scale-105 für leichten Vergrösserungseffekt
               - group-hover:bg-amber-200 um den Hintergrund beim Hover leicht abzudunkeln
             -->
             <article

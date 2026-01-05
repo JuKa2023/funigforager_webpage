@@ -12,7 +12,7 @@ export const newsItems: NewsItem[] = [
     id: '2026-01-release',
     date: '2026-01-01',
     title: 'Offizieller Release – Spiel out now',
-    body: 'Der offizielle Release ist live – viel Spaß beim Spielen!',
+    body: 'Der offizielle Release ist live. Viel Spass beim Spielen!',
   },
   {
     id: '2025-11-beta',

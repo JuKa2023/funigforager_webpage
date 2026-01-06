@@ -16,7 +16,7 @@
             >Hinweis</router-link
           >
 
-          <router-link to="/lexikon" class="nav-link" :class="{ hideen: $route.name === 'lexikon' }"
+          <router-link to="/lexikon" class="nav-link" :class="{ hidden: $route.name === 'lexikon' }"
             >Lexikon</router-link
           >
 

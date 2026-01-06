@@ -7,7 +7,7 @@ Ein Projekt von:
 - [@JuKa2023](https://github.com/JuKa2023)
 - [@Nadiagiliberti](https://github.com/NadiaGiliberti)
 
-„Fungi Forager“ ist ein interaktives Lernspiel, das Spieler:innen in eine realistisch gestaltete Waldumgebung entführt, um fundiertes Basiswissen zur Pilzbestimmung zu vermitteln. Der Spielumfang umfasst die Suche, Erfassung und Klassifizierung von ausgewählten Pilzarten (essbar, ungeniessbar, giftig), die im integrierten Lexikon freigeschaltet und mit Bildern, Merkmalen und Hintergrundwissen versehen werden.
+„Fungi Forager“ ist ein interaktives Lernspiel, das Spieler:innen in eine Waldumgebung entführt, um Basiswissen zur Pilzbestimmung zu vermitteln. Der Spielumfang umfasst die Suche, Erfassung und Klassifizierung von ausgewählten Pilzarten (essbar oder giftig), die im integrierten Lexikon freigeschaltet und mit Bildern, Merkmalen und Hintergrundwissen versehen werden. Die Website dient als begleitende Website, die als zentraler Informations-Hub dient. Dieses Konzept orientiert sich an etablierten Modellen aus dem Mobile- und Konsolenbereich (wie etwa Clash of Clans), bei denen die Anwendung lokal läuft und durch eine Website mit Neuigkeiten und Hilfestellungen ergänzt wird.
 
 Zentrale Lernziele:
 
@@ -18,14 +18,13 @@ Zentrale Lernziele:
 
 Was kann das Tool?
 
-- Interaktives Pilzlexikon mit detaillierten Einträgen
-- 3D-Modelle ausgewählter Pilze
-- Spiel-Infos und WebGL-Spielintegration im Browser
+- Interaktives Pilzlexikon mit detaillierten Einträgen und 3D-Modelle der Pilze
+- Begleitende Informationen zum Spiel Fungi Forager
 
 Was funktioniert noch nicht / bekannte Einschränkungen?
 
-- WebGL-Performance ist abhängig von der Geräte-GPU und dem Speicherbudget des Browsers
-- Einzelne 3D-Modelle sind nur als Platzhalter vorhanden
+- 3D-Modelle der Pilze werden minim unterschiedlich gross angezeigt. 
+- Ansonsten keine uns bekannten Bugs. Gerne melden, wenn es mehr gibt.
 
 ## Datenstruktur
 
@@ -75,7 +74,6 @@ Feldübersicht:
 ### Eigene Assets
 
 - **3D-Modelle**: GLB-Modelle in `public/mushroom/`
-- **WebGL-Build**: Unity-WebGL in `public/unity/forest/`
 
 ### Technologien
 
@@ -129,4 +127,3 @@ npm run format
 
 - Datenstruktur früh zu definieren vereinfacht UI und Logik.
 - Konsistente Feldnamen verhindern Layout- und Filterfehler.
-- WebGL erfordert Performance-Tests auf mehreren Geräten.

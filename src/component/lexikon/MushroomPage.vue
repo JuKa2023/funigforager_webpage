@@ -20,37 +20,37 @@
     <div class="font-serif text-gray-700 text-sm">
       <div v-if="mushroom.latinName" class="mb-3">
         <span class="font-architect font-bold block text-base">Latein</span>
-        <p class="font-montserrat text-[7px] sm:text-[9px] leading-relaxed">
+        <p class="font-montserrat text-[7px] sm:text-[8px] leading-relaxed">
           {{ mushroom.latinName }}
         </p>
       </div>
 
       <div v-if="mushroom.description" class="mb-3">
         <span class="font-architect font-bold block text-base">Aussehen</span>
-        <p class="font-montserrat text-[7px] sm:text-[9px] leading-relaxed">
+        <p class="font-montserrat text-[7px] sm:text-[8px] leading-relaxed">
           {{ mushroom.description }}
         </p>
       </div>
 
       <div v-if="mushroom.size" class="mb-3">
         <span class="font-architect font-bold block text-base">Grösse</span>
-        <p class="font-montserrat text-[7px] sm:text-[9px]">{{ mushroom.size }}</p>
+        <p class="font-montserrat text-[7px] sm:text-[8px]">{{ mushroom.size }}</p>
       </div>
 
       <div v-if="mushroom.location" class="mb-3">
         <span class="font-architect font-bold block text-base">Standort</span>
-        <p class="font-montserrat text-[7px] sm:text-[9px]">{{ mushroom.location }}</p>
+        <p class="font-montserrat text-[7px] sm:text-[8px]">{{ mushroom.location }}</p>
       </div>
 
       <div v-if="mushroom.season" class="mb-3">
         <span class="font-architect font-bold block text-base">Erscheinungszeit</span>
-        <p class="font-montserrat text-[7px] sm:text-[9px]">{{ mushroom.season }}</p>
+        <p class="font-montserrat text-[7px] sm:text-[8px]">{{ mushroom.season }}</p>
       </div>
 
       <div v-if="mushroom.edibility" class="mb-3">
         <span class="font-architect font-bold block text-base">Speisewert</span>
         <p
-          class="font-montserrat text-[7px] sm:text-[9px]"
+          class="font-montserrat text-[7px] sm:text-[8px]"
           :class="{ 'text-green-700': isEdible(mushroom), 'text-red-700': isPoisonous(mushroom) }"
         >
           {{ mushroom.edibility }}
@@ -59,14 +59,14 @@
 
       <div v-if="mushroom.confusionRisk.length" class="mb-3">
         <span class="font-architect font-bold block text-base">Verwechslungsgefahr</span>
-        <p class="font-montserrat text-[7px] sm:text-[9px]">
+        <p class="font-montserrat text-[7px] sm:text-[8px]">
           {{ mushroom.confusionRisk.join(', ') }}
         </p>
       </div>
 
       <div v-if="mushroom.tip" class="mb-3">
         <span class="font-architect font-bold block text-base">Tipp</span>
-        <p class="font-montserrat text-[7px] sm:text-[9px] italic text-gray-600">
+        <p class="font-montserrat text-[7px] sm:text-[8px] italic text-gray-600">
           {{ mushroom.tip }}
         </p>
       </div>
